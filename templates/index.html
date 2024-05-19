@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>All Posts</h1>
+<ul>
+    {% for post in posts %}
+    <li><a href="/post/{{ post[0] }}"><strong>{{ post[1] }}</strong></a> by {{ post[3] }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
